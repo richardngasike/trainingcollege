@@ -1,0 +1,85 @@
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.imgWrap { position: relative; height: 440px; }
+.mainImg {
+  position: absolute; top: 0; left: 0;
+  width: 80%; height: 85%;
+  object-fit: cover; border-radius: 20px;
+  box-shadow: var(--shadow-xl);
+}
+.floatImg {
+  position: absolute; bottom: 0; right: 0;
+  width: 55%; height: 50%;
+  object-fit: cover; border-radius: 16px;
+  border: 5px solid var(--white);
+  box-shadow: var(--shadow-lg);
+}
+.mvSection { background: var(--blue-deep); padding: 72px 0; }
+.mvGrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
+.mvCard {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px; padding: 36px 28px;
+}
+.mvCardAccent { background: rgba(245,158,11,0.1); border-color: rgba(245,158,11,0.3); }
+.mvTitle {
+  font-family: var(--font-display); font-size: 1.3rem;
+  font-weight: 700; color: var(--white); margin-bottom: 16px;
+}
+.mvText { font-size: 0.95rem; color: rgba(255,255,255,0.72); line-height: 1.8; }
+.valuesGrid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+.valueCard {
+  background: var(--white); border: 1px solid var(--gray-100);
+  border-radius: 20px; padding: 32px 24px; text-align: center;
+  box-shadow: var(--shadow-sm); transition: var(--transition);
+}
+.valueCard:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.valueIcon {
+  width: 64px; height: 64px; border-radius: 16px;
+  background: var(--blue-pale); color: var(--blue-dark);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem; margin: 0 auto 18px;
+}
+.valueTitle { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--blue-deep); margin-bottom: 10px; }
+.valueDesc { font-size: 0.88rem; color: var(--gray-500); line-height: 1.65; }
+.timeline { background: var(--gray-50); padding: 80px 0; }
+.timelineList { position: relative; max-width: 900px; margin: 0 auto; }
+.timelineList::before {
+  content: ""; position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 2px; background: var(--blue-pale); transform: translateX(-50%);
+}
+.timelineItem {
+  display: flex; width: 50%; padding: 0 48px 32px; position: relative;
+}
+.left { align-self: flex-start; justify-content: flex-end; }
+.right { align-self: flex-end; justify-content: flex-start; margin-left: 50%; }
+.timelineDot {
+  position: absolute; top: 4px;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--blue-dark); border: 3px solid var(--white);
+  box-shadow: 0 0 0 3px var(--blue-pale);
+}
+.left .timelineDot { right: -8px; }
+.right .timelineDot { left: -8px; }
+.timelineCard {
+  background: var(--white); border-radius: 12px;
+  padding: 16px 20px; box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-100);
+}
+.timelineYear {
+  font-family: var(--font-display); font-size: 1.2rem;
+  font-weight: 800; color: var(--blue-dark); display: block; margin-bottom: 6px;
+}
+.timelineEvent { font-size: 0.88rem; color: var(--gray-600); line-height: 1.5; }
+
+@media (max-width: 900px) {
+  .aboutGrid, .mvGrid, .valuesGrid { grid-template-columns: 1fr; }
+  .timelineList::before { left: 16px; }
+  .timelineItem { width: 100%; padding-left: 48px; justify-content: flex-start; }
+  .right { margin-left: 0; }
+  .left .timelineDot, .right .timelineDot { left: 8px; right: auto; }
+}

@@ -1,0 +1,55 @@
+.filters {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  justify-content: center; margin-bottom: 40px;
+}
+.filterBtn {
+  padding: 8px 20px; border-radius: 50px;
+  font-family: var(--font-heading); font-size: 0.88rem; font-weight: 600;
+  border: 2px solid var(--blue-pale); color: var(--gray-600);
+  background: var(--white); cursor: pointer; transition: var(--transition);
+}
+.filterBtn:hover { border-color: var(--blue-dark); color: var(--blue-dark); }
+.filterActive { background: var(--blue-dark); color: var(--white); border-color: var(--blue-dark); }
+.masonry {
+  columns: 4; column-gap: 14px;
+}
+.masonryItem {
+  break-inside: avoid; margin-bottom: 14px;
+  position: relative; overflow: hidden; border-radius: 12px;
+  cursor: pointer;
+}
+.galleryImg { width: 100%; display: block; transition: transform 0.4s; }
+.masonryItem:hover .galleryImg { transform: scale(1.04); }
+.imgOverlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(13,36,96,0.7) 0%, transparent 50%);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 16px; opacity: 0; transition: opacity 0.3s;
+}
+.masonryItem:hover .imgOverlay { opacity: 1; }
+.imgTitle { font-family: var(--font-heading); font-size: 0.88rem; font-weight: 700; color: var(--white); }
+.imgCat {
+  font-size: 0.72rem; color: var(--gold-accent);
+  font-family: var(--font-heading); font-weight: 600;
+  text-transform: uppercase; margin-top: 3px;
+}
+.lightbox {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.9);
+  z-index: 9999; display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+}
+.lightboxInner {
+  position: relative; max-width: 900px; width: 100%;
+}
+.lightboxClose {
+  position: absolute; top: -40px; right: 0;
+  background: none; border: none; color: var(--white);
+  font-size: 1.4rem; cursor: pointer; padding: 8px;
+}
+.lightboxImg { width: 100%; border-radius: 12px; max-height: 80vh; object-fit: contain; }
+.lightboxCaption {
+  text-align: center; color: rgba(255,255,255,0.7);
+  margin-top: 12px; font-family: var(--font-heading); font-size: 0.92rem;
+}
+@media (max-width: 900px) { .masonry { columns: 3; } }
+@media (max-width: 600px) { .masonry { columns: 2; } }

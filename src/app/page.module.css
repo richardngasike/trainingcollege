@@ -1,0 +1,404 @@
+.page { overflow-x: hidden; }
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.sectionHeader .section-title { margin-top: 8px; margin-bottom: 16px; }
+
+/* Features */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.featureCard {
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--border-radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.featureCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--blue-pale);
+}
+
+.featureIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: var(--blue-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 1.8rem;
+  color: var(--blue-dark);
+  transition: var(--transition);
+}
+
+.featureCard:hover .featureIcon {
+  background: var(--blue-dark);
+  color: var(--white);
+}
+
+.featureTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--blue-deep);
+  margin-bottom: 10px;
+}
+
+.featureDesc {
+  font-size: 0.9rem;
+  color: var(--gray-500);
+  line-height: 1.65;
+}
+
+/* About */
+.aboutInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.imgStack {
+  position: relative;
+  height: 480px;
+}
+
+.mainImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 85%;
+  object-fit: cover;
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-xl);
+}
+
+.secondImg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 55%;
+  height: 55%;
+  object-fit: cover;
+  border-radius: var(--border-radius-lg);
+  border: 6px solid var(--white);
+  box-shadow: var(--shadow-lg);
+}
+
+.yearsCard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--blue-dark);
+  color: var(--white);
+  border-radius: 16px;
+  padding: 20px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  min-width: 120px;
+}
+
+.yearsNum {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--gold-accent);
+  line-height: 1;
+}
+
+.yearsText {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 4px;
+  color: rgba(255,255,255,0.8);
+}
+
+.aboutText { display: flex; flex-direction: column; gap: 20px; }
+
+.aboutDesc { font-size: 1rem; color: var(--gray-600); line-height: 1.75; }
+
+.whyList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 16px;
+  margin: 8px 0;
+}
+
+.whyItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--gray-700);
+  font-family: var(--font-heading);
+  font-weight: 500;
+}
+
+.checkIcon { color: var(--blue-dark); font-size: 1rem; flex-shrink: 0; margin-top: 2px; }
+
+/* Courses */
+.coursesSection { background: var(--gray-50); }
+
+.coursesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Admissions CTA */
+.admissionsCTA {
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.admissionsBg {
+  position: absolute;
+  inset: 0;
+}
+
+.admissionsBgImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admissionsOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(13,36,96,0.92), rgba(21,101,192,0.80));
+}
+
+.admissionsContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.admissionsTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  color: var(--white);
+  margin: 16px 0;
+  line-height: 1.2;
+}
+
+.admissionsAccent { color: var(--gold-accent); }
+
+.admissionsText {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.82);
+  max-width: 560px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+
+.admissionsActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.infoBtn {
+  padding: 13px 28px;
+  border: 2px solid rgba(255,255,255,0.5);
+  color: var(--white);
+  border-radius: 50px;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.infoBtn:hover { background: rgba(255,255,255,0.15); border-color: var(--white); }
+
+.admissionsFeatures {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.admissionsFeature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+}
+
+/* Teachers */
+.teachersGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.teacherCard {
+  text-align: center;
+  cursor: pointer;
+}
+
+.teacherImgWrap {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  aspect-ratio: 3/4;
+}
+
+.teacherImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.teacherCard:hover .teacherImg { transform: scale(1.06); }
+
+.teacherOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13,36,96,0.75) 0%, transparent 50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.teacherCard:hover .teacherOverlay { opacity: 1; }
+
+.teacherProfileBtn {
+  padding: 8px 20px;
+  background: var(--white);
+  color: var(--blue-deep);
+  border-radius: 50px;
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.teacherName {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--blue-deep);
+}
+
+.teacherTitle {
+  font-size: 0.85rem;
+  color: var(--blue-dark);
+  margin-top: 4px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+}
+
+/* News */
+.newsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Gallery Preview */
+.galleryPreview { background: var(--gray-50); }
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 12px;
+}
+
+.galleryGrid > *:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.galleryItem {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  aspect-ratio: 4/3;
+  cursor: pointer;
+}
+
+.galleryGrid > *:first-child { aspect-ratio: 16/9; }
+
+.galleryImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.galleryItem:hover .galleryImg { transform: scale(1.08); }
+
+.galleryHover {
+  position: absolute;
+  inset: 0;
+  background: rgba(13,36,96,0.0);
+  transition: background 0.3s;
+}
+
+.galleryItem:hover .galleryHover { background: rgba(13,36,96,0.25); }
+
+/* View All */
+.viewAll {
+  text-align: center;
+  margin-top: 44px;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .featuresGrid { grid-template-columns: repeat(2, 1fr); }
+  .teachersGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .aboutInner { grid-template-columns: 1fr; gap: 40px; }
+  .coursesGrid { grid-template-columns: repeat(2, 1fr); }
+  .newsGrid { grid-template-columns: repeat(2, 1fr); }
+  .galleryGrid { grid-template-columns: repeat(2, 1fr); }
+  .galleryGrid > *:first-child { grid-column: span 2; aspect-ratio: 16/9; }
+}
+
+@media (max-width: 640px) {
+  .featuresGrid { grid-template-columns: 1fr; }
+  .coursesGrid { grid-template-columns: 1fr; }
+  .teachersGrid { grid-template-columns: repeat(2, 1fr); }
+  .newsGrid { grid-template-columns: 1fr; }
+  .whyList { grid-template-columns: 1fr; }
+  .imgStack { height: 300px; }
+}
