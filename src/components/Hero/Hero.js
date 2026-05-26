@@ -13,8 +13,7 @@ import styles from "./Hero.module.css";
 
 const slides = [
   {
-    image: "/images/hero/hero1.jpeg",
-    tag: "Kenya's Premier Teacher Training Institution",
+    image: "/images/hero/hero0.png",
     title: "Inspiring",
     titleAccent: "Teachers",
     titleEnd: "for Tomorrow",
@@ -26,7 +25,6 @@ const slides = [
   },
   {
     image: "/images/hero/hero2.jpeg",
-    tag: "Excellence in Education Since 1985",
     title: "Empowering",
     titleAccent: "Minds",
     titleEnd: "With Knowledge",
@@ -37,8 +35,7 @@ const slides = [
     secondaryHref: "/staff",
   },
   {
-    image: "/images/hero3.jpg",
-    tag: "Ministry of Education Accredited",
+    image: "/images/hero/hero1.jpeg",
     title: "Building",
     titleAccent: "Leaders",
     titleEnd: "in Classrooms",
@@ -51,10 +48,10 @@ const slides = [
 ];
 
 const stats = [
-  { value: "38+", label: "Years of Excellence" },
-  { value: "5,200+", label: "Graduates" },
+  { value: "10+", label: "Years of Excellence" },
+  { value: "200+", label: "Graduates" },
   { value: "98%", label: "Employment Rate" },
-  { value: "12", label: "Programs Offered" },
+  { value: "10+", label: "Programs Offered" },
 ];
 
 export default function Hero() {
@@ -114,8 +111,6 @@ export default function Hero() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.1, duration: 0.5 }}
             >
-              <HiAcademicCap className={styles.tagIcon} />
-              {activeSlide.tag}
             </motion.div>
 
             <motion.h1

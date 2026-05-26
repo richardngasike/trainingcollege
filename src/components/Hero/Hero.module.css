@@ -65,32 +65,10 @@
   max-width: 700px;
 }
 
-.tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 18px;
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.25);
-  border-radius: 50px;
-  color: rgba(255,255,255,0.95);
-  font-family: var(--font-heading);
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: 24px;
-}
-
-.tagIcon {
-  font-size: 1rem;
-  color: var(--gold-accent);
-}
 
 .title {
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-size: clamp(1.2rem, 6vw, 4.5rem);
   font-weight: 800;
   color: var(--white);
   line-height: 1.1;
@@ -104,7 +82,7 @@
 }
 
 .subtitle {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(0.5rem, 2vw, 1.2rem);
   color: rgba(255,255,255,0.88);
   line-height: 1.7;
   max-width: 560px;
