@@ -159,7 +159,7 @@ export default function HomePage() {
               <img src="/images/campus/campus1.jpg" alt="Campus" className={styles.mainImg} />
               <img src="/images/campus/campus2.jpg" alt="Library" className={styles.secondImg} />
               <div className={styles.yearsCard}>
-                <span className={styles.yearsNum}>38+</span>
+                <span className={styles.yearsNum}>10+</span>
                 <span className={styles.yearsText}>Years of Excellence</span>
               </div>
             </div>
@@ -175,8 +175,8 @@ export default function HomePage() {
             <h2 className="section-title">A Legacy of Teaching Excellence</h2>
             <p className={styles.aboutDesc}>
               St John's Teachers Training College has been a cornerstone of teacher education
-              in Kenya since 1985. Founded on Christian values and academic excellence, we have
-              produced over 5,200 qualified teachers who are transforming classrooms across Kenya.
+              in Kenya since 2015. Founded on Christian values and academic excellence, we have
+              produced over 200 qualified teachers who are transforming classrooms across Kenya.
             </p>
             <p className={styles.aboutDesc}>
               Our ministry-accredited programs combine theory with extensive teaching practice
